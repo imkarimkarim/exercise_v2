@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-
 import Index from './pages/Index';
+import { appStyles } from './AppStyles';
 
 export default function App() {
 	return (
-		<View className='flex-1 justify-center items-center bg-white'>
+		<View style={appStyles.container}>
 			<Index />
 		</View>
 	);
