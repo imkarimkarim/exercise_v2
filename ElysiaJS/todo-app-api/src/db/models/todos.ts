@@ -1,6 +1,6 @@
 import { Document, Schema, model } from 'mongoose';
 
-export interface ITodo extends Document {
+export interface ITodos extends Document {
 	title: string;
 	description: string;
 	isDone: boolean;
@@ -9,7 +9,7 @@ export interface ITodo extends Document {
 	// updatedAt: timestamp (will added by mongoDB)
 }
 
-const schema = new Schema<ITodo>(
+const todosSchema = new Schema<ITodos>(
 	{
 		title: {
 			type: String,
@@ -18,17 +18,19 @@ const schema = new Schema<ITodo>(
 		},
 		description: {
 			type: String,
-			required: true,
+			required: false,
 			unique: false,
+			default: '',
 		},
 		isDone: {
 			type: Boolean,
-			required: true,
+			required: false,
 			unique: false,
+			default: false,
 		},
 		nice: {
 			type: Number,
-			required: true,
+			required: false,
 			unique: false,
 			default: 0,
 		}, // will sort based on nice then -> timeAdded
@@ -41,4 +43,4 @@ const schema = new Schema<ITodo>(
 	}
 );
 
-export default model<ITodo>('todo', schema);
+export const Todos = model<ITodos>('Todo', todosSchema);

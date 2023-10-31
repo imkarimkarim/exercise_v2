@@ -1,4 +1,5 @@
 import { Elysia, t } from 'elysia';
+import { Todos } from '../../../db/models/todos';
 
 export const todos = new Elysia({ prefix: '/todos' })
 	// schema
@@ -13,7 +14,11 @@ export const todos = new Elysia({ prefix: '/todos' })
 
 	// GET ALL
 	.get('/', () => {
-		return 'here will all the todo will be listed';
+		try {
+			return Todos.find({});
+		} catch (error) {
+			console.error(error);
+		}
 	})
 
 	// GET /:ID
@@ -25,10 +30,13 @@ export const todos = new Elysia({ prefix: '/todos' })
 	.post(
 		'/',
 		(ctx) => {
-			return {
-				msg: 'will save this to the db',
-				body: ctx.body,
-			};
+			try {
+				return new Todos({
+					...ctx.body,
+				}).save();
+			} catch (error) {
+				return error;
+			}
 		},
 		{
 			body: 'todo',
@@ -39,11 +47,11 @@ export const todos = new Elysia({ prefix: '/todos' })
 	.patch(
 		'/:id',
 		(ctx) => {
-			return {
-				msg: 'will update: ' + ctx.params.id,
-				msg2: 'to this:',
-				body: ctx.body,
-			};
+			try {
+				return Todos.updateOne({ _id: ctx.params.id }, { ...ctx.body });
+			} catch (error) {
+				return error;
+			}
 		},
 		{
 			body: 'todo',
@@ -52,8 +60,9 @@ export const todos = new Elysia({ prefix: '/todos' })
 
 	// DELETE a todo
 	.delete('/:id', (ctx) => {
-		return 'will delete: ' + ctx.params.id;
+		try {
+			return Todos.deleteOne({ _id: ctx.params.id });
+		} catch (error) {
+			return error;
+		}
 	});
-
-// /todos/:id delete(DELETE)
-// /todos/:id update(PATCH)
