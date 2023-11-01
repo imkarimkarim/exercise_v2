@@ -1,15 +1,12 @@
-# Elysia with Bun runtime
+# ElysiaJS-todo-app with Bun runtime
 
 ## Getting Started
-To get started with this template, simply paste this command into your terminal:
+
+simply clone this repo, then run:  
+
 ```bash
-bun create elysia ./elysia-example
+bun dev
 ```
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
-
-Open http://localhost:3000/ with your browser to see the result.
+Open <http://localhost:3000/swagger> with your browser to see the documentation.  
+for more info checkout [ElysiaJS website](https://elysiajs.com/).

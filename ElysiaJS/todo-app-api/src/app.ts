@@ -2,10 +2,11 @@
 
 import { Elysia } from 'elysia';
 import { swagger } from '@elysiajs/swagger';
-import { logger, fileLogger } from '@bogeychan/elysia-logger';
+import { fileLogger } from '@bogeychan/elysia-logger';
 import './db/db';
 import { v1 } from './routes/v1/v1';
 import PinoPretty from 'pino-pretty';
+import packageJson from '../package.json';
 
 const stream = PinoPretty({
 	colorize: true,
@@ -17,7 +18,16 @@ const app = new Elysia()
 			file: 'app.log',
 		})
 	)
-	.use(swagger())
+	.use(
+		swagger({
+			documentation: {
+				info: {
+					title: 'ElysiaJS-todo-app Docs',
+					version: packageJson.version,
+				},
+			},
+		})
+	)
 	.use(v1)
 	.listen(3000);
 
