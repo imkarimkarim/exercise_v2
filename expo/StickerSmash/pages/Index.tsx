@@ -5,13 +5,14 @@ import { indexStyles } from './IndexStyles';
 import TheImage from '../components/common/TheImage';
 import TheButton from '../components/common/TheButton';
 import * as ImagePicker from 'expo-image-picker';
-const placeholderImage = require('../assets/images/background-image.png');
 
 export default function Index() {
 	const [selectedImage, setSelectedImage] = useState(null);
-	const handleImagePick = async () => {
+
+	const handleImagePick = async ({ allowsEditing = false }) => {
 		let result = await ImagePicker.launchImageLibraryAsync({
 			quality: 1,
+			allowsEditing,
 		});
 
 		// @ts-ignore (https://github.com/expo/expo/issues/20977#issuecomment-1544422682)
@@ -19,21 +20,23 @@ export default function Index() {
 
 		if (!result.canceled) {
 			console.log(result);
-			setSelectedImage(result.assets[0].uri);
+			setSelectedImage(result.assets[0]);
 		} else {
-			alert('You did not select any image.');
+			console.log('client did not select any image.');
 		}
 	};
+
 	return (
 		<View style={indexStyles.container}>
 			<View style={[indexStyles.imageContainer]}>
-				<TheImage
-					source={selectedImage ? { uri: selectedImage } : placeholderImage}
-					onPress={handleImagePick}
-				/>
+				<TheImage source={selectedImage} onPress={() => handleImagePick({})} />
 			</View>
 			<View style={[indexStyles.footerContainer]}>
-				<TheButton type='primary' label='Choose a photo' onPress={handleImagePick} />
+				<TheButton
+					type='primary'
+					label='Choose a photo'
+					onPress={() => handleImagePick({ allowsEditing: true })}
+				/>
 				<TheButton
 					label='Choose a photo'
 					onPress={() => {
