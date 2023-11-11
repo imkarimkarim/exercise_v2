@@ -11,6 +11,7 @@ export default function Index() {
 
 	const handleImagePick = async ({ allowsEditing = false }) => {
 		let result = await ImagePicker.launchImageLibraryAsync({
+			mediaTypes: ImagePicker.MediaTypeOptions.All,
 			quality: 1,
 			allowsEditing,
 		});
@@ -37,12 +38,13 @@ export default function Index() {
 					label='Choose a photo'
 					onPress={() => handleImagePick({ allowsEditing: true })}
 				/>
-				<TheButton
+				{/* <TheButton
 					label='Choose a photo'
 					onPress={() => {
 						alert('mmd did say hi! 👋🏽');
 					}}
-				/>
+				/> */}
+				<TheButton label='clear' onPress={() => setSelectedImage(null)} />
 			</View>
 			<StatusBar style='light' />
 		</View>

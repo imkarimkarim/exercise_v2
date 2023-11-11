@@ -14,18 +14,19 @@ export default function TheImage({
 }) {
 	return (
 		<Pressable onPress={onPress}>
-			<View style={styles.container}>
+			<View style={[styles.container]}>
 				<Image
-					source={source.uri}
+					source={source?.uri}
 					style={[
 						styles.image,
 						{
-							width: source.width,
-							height: source.height,
+							width: source?.width || 356,
+							height: source?.height || 522,
 						},
 					]}
 					contentFit='contain'
 					placeholder={placeholderImage}
+					transition={1000}
 				/>
 			</View>
 		</Pressable>
@@ -41,7 +42,5 @@ const styles = StyleSheet.create({
 	image: {
 		flex: 1,
 		width: '100%',
-		// borderColor: 'yellow',
-		// borderWidth: 1,
 	},
 });
