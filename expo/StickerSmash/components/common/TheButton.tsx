@@ -6,17 +6,19 @@ export default function TheButton({
 	label,
 	type,
 	onPress,
+	iconName,
 }: {
 	label: string;
 	type?: 'primary';
 	onPress?: (event: GestureResponderEvent) => void;
+	iconName?: string | any;
 }) {
 	const isP = type && type === 'primary';
 
 	return (
 		<View style={styles.buttonContainer}>
 			<Pressable style={[styles.button, { backgroundColor: isP ? '#fff' : 'auto' }]} onPress={onPress}>
-				{isP && <FontAwesome name='picture-o' size={18} color='#25292e' style={styles.buttonIcon} />}
+				{iconName && <FontAwesome name={iconName} size={18} color='#25292e' style={styles.buttonIcon} />}
 				<Text style={[styles.buttonLabel, { color: isP ? '#25292e' : '#fff' }]}>{label}</Text>
 			</Pressable>
 		</View>
@@ -25,17 +27,13 @@ export default function TheButton({
 
 const styles = StyleSheet.create({
 	buttonContainer: {
-		width: 320,
-		height: 68,
-		marginHorizontal: 20,
 		alignItems: 'center',
 		justifyContent: 'center',
-		padding: 3,
+		padding: 5,
 	},
 	button: {
 		borderRadius: 10,
-		width: '100%',
-		height: '100%',
+		padding: 20,
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'row',
