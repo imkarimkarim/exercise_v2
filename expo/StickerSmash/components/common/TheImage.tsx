@@ -26,7 +26,6 @@ export default function TheImage({
 					]}
 					contentFit='contain'
 					placeholder={placeholderImage}
-					transition={1000}
 				/>
 			</View>
 		</Pressable>

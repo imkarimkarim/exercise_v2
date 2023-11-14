@@ -5,9 +5,6 @@ import { indexStyles } from './IndexStyles';
 import TheImage from '../components/common/TheImage';
 import TheButton from '../components/common/TheButton';
 import * as ImagePicker from 'expo-image-picker';
-import * as DocumentPicker from 'expo-document-picker';
-import { launchImageLibrary } from 'react-native-image-picker';
-import * as MediaLibrary from 'expo-media-library';
 
 export default function Index() {
 	const [selectedImage, setSelectedImage] = useState(null);
@@ -29,37 +26,6 @@ export default function Index() {
 			console.log('client did not select any image.');
 		}
 	};
-
-	const [status, requestPermission] = ImagePicker.useMediaLibraryPermissions();
-	// const [permissionResponse, requestPermission] = MediaLibrary.usePermissions();
-
-	// console.log('🚀 - Index - permissionResponse', permissionResponse);
-	// useEffect(() => {
-	// 	if (!permissionResponse || !permissionResponse.granted) {
-	// 		requestPermission();
-	// 	}
-	// }, [permissionResponse]);
-
-	// MediaLibrary.getAlbumsAsync().then((mmd: any) => {
-	// 	console.log('mmd');
-	// 	// mmd.forEach((element) => {
-	// 	// 	console.log(element.title);
-	// 	// });
-	// 	const tmp = mmd.filter((m: any) => m.title.includes('NEW'));
-	// 	console.log('🚀 - MediaLibrary.getAlbumsAsync - tmp', tmp[0].id);
-	// 	MediaLibrary.getAssetInfoAsync(tmp[0].id).then((val: any) => {
-	// 		console.log(val);
-	// 	});
-	// });
-
-	useEffect(() => {
-		console.log('🚀 - Index - status', status);
-		if (!status || !status.granted) {
-			requestPermission().then((value: any) => {
-				console.log(value);
-			});
-		}
-	}, [status]);
 
 	return (
 		<View style={indexStyles.container}>
