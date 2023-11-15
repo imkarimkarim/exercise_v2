@@ -1,0 +1,15 @@
+{
+	"scripts": {
+		"start": "tsx src/app.tsx",
+		"dev": "tsx watch src/app.tsx"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.2.2",
+		"@hono/swagger-ui": "^0.1.0",
+		"hono": "^3.10.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.9.0",
+		"tsx": "^3.12.2"
+	}
+}

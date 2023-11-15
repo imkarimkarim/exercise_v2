@@ -1,0 +1,32 @@
+1700052496016  |  <-- GET /ui
+1700052496020  |  --> GET /ui [32m200[0m 3ms
+1700052497095  |  <-- GET /workbox-eac1af49.js
+1700052497096  |  --> GET /workbox-eac1af49.js [33m404[0m 0ms
+1700052497100  |  <-- GET /worker-development.js
+1700052497101  |  --> GET /worker-development.js [33m404[0m 1ms
+1700052497104  |  <-- GET /sw.js
+1700052497104  |  --> GET /sw.js [33m404[0m 0ms
+1700052501842  |  <-- GET /doc
+1700052501843  |  --> GET /doc [33m404[0m 0ms
+1700052502858  |  <-- GET /workbox-eac1af49.js
+1700052502859  |  --> GET /workbox-eac1af49.js [33m404[0m 1ms
+1700052502862  |  <-- GET /worker-development.js
+1700052502863  |  --> GET /worker-development.js [33m404[0m 1ms
+1700052502865  |  <-- GET /sw.js
+1700052502866  |  --> GET /sw.js [33m404[0m 0ms
+1700052521702  |  <-- GET /docs/
+1700052521705  |  --> GET /docs/ [33m404[0m 3ms
+1700052522739  |  <-- GET /sw.js
+1700052522740  |  --> GET /sw.js [33m404[0m 0ms
+1700052522742  |  <-- GET /workbox-eac1af49.js
+1700052522743  |  --> GET /workbox-eac1af49.js [33m404[0m 0ms
+1700052522746  |  <-- GET /worker-development.js
+1700052522746  |  --> GET /worker-development.js [33m404[0m 0ms
+1700052524875  |  <-- GET /doc/
+1700052524875  |  --> GET /doc/ [33m404[0m 0ms
+1700052526052  |  <-- GET /sw.js
+1700052526053  |  --> GET /sw.js [33m404[0m 1ms
+1700052526056  |  <-- GET /workbox-eac1af49.js
+1700052526056  |  --> GET /workbox-eac1af49.js [33m404[0m 0ms
+1700052526058  |  <-- GET /worker-development.js
+1700052526058  |  --> GET /worker-development.js [33m404[0m 0ms
