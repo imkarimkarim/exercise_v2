@@ -16,7 +16,6 @@ export default function ThemeToggle() {
 			<View style={styles.button}>
 				<Button onPress={handleOnPress}>change</Button>
 			</View>
-			<StatusBar style={mode === 'dark' ? 'light' : 'dark'} />
 		</>
 	);
 }
