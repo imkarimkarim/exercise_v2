@@ -1,21 +1,16 @@
+<https://reactnativeelements.com/>  
+<https://docs.expo.dev/>  
+<https://www.reddit.com/r/reactnative/>
+
+---
+
 # @rneui/template
 
-## React Native Elements Expo Template
+## React Native Elements Expo Template (Expo Router) (SDK49)
 
 ### Usage
 
-#### Stable
-
-        expo init app --template @rneui/template
-
-#### Stable Typescript
-
-        expo init app --template @rneui/template@ts
-
-#### Bleeding Edge (Experimental)
-
-        expo init app --template @rneui/template@edge
-
-#### Bleeding Edge Typescript (Experimental)
-
-        expo init app --template @rneui/template@edge-ts
+```bash
+npx expo install
+yarn start
+```
