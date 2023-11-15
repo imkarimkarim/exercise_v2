@@ -1,3 +1,4 @@
 {
-	"cSpell.words": ["rneui"]
+	"cSpell.words": ["rneui"],
+	"conventionalCommits.scopes": ["Expo-Todo"]
 }
