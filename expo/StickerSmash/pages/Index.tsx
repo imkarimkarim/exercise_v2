@@ -75,7 +75,7 @@ export default function Index() {
 				<EmojiPickerModal show={showEmojiPickerModal} onClose={() => setShowEmojiPickerModal(false)}>
 					<EmojiList onSelect={setPickedEmoji} onCloseModal={() => setShowEmojiPickerModal(false)} />
 				</EmojiPickerModal>
-				<StatusBar style='light' />
+				<StatusBar style='auto' />
 			</View>
 		</>
 	);
