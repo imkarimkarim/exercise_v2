@@ -1,8 +1,5 @@
 it's OOP, so think OOP!
 
-todo:
-add swagger, logging, guards and cors
-
 ---
 
 <p align="center">
