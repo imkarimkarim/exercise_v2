@@ -1,6 +1,11 @@
-<https://reactnativeelements.com/>  
 <https://docs.expo.dev/>  
+<https://reactnativeelements.com/>  
+<https://oblador.github.io/react-native-vector-icons/>
 <https://www.reddit.com/r/reactnative/>
+
+```sh
+./Android/Sdk/emulator/emulator -avd "Pixel_2_API_30"
+```
 
 ---
 

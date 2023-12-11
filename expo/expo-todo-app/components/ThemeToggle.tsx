@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Button, useThemeMode } from '@rneui/themed';
-import { StatusBar } from 'expo-status-bar';
+import { Button, Icon, useThemeMode } from '@rneui/themed';
 import { useGlobalStyles } from '../styles/global';
 
 export default function ThemeToggle() {
@@ -14,7 +13,9 @@ export default function ThemeToggle() {
 	return (
 		<>
 			<View style={styles.button}>
-				<Button onPress={handleOnPress}>change</Button>
+				<Button onPress={handleOnPress}>
+					<Icon name={mode === 'dark' ? 'moon' : 'sun'} type='feather' />
+				</Button>
 			</View>
 		</>
 	);

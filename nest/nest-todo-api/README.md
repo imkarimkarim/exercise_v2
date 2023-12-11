@@ -1,6 +1,11 @@
 it's OOP, so think OOP!
 
 ---
+run with:
+```
+npm run dev -- -b swc 
+```
+// for production save logs to a file...
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
