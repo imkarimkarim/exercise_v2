@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafc;
+}
+
+.section-wrapper {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.account-form {
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 25px 40px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #5e6c84;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+input[type='text'],
+input[type='password'] {
+  padding: 0.6em 1.3em;
+  max-width: 400px;
+  margin: 0 0 1.2em;
+  width: 100%;
+  font-size: 14px;
+  background-color: #fafbfc;
+  border: 2px solid #dfe1e6;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 44px;
+  -webkit-transition: background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
+  transition: background-color 0.2s ease-in-out 0s,
+    border-color 0.2s ease-in-out 0s;
+}
+
+input:focus {
+  background-color: white;
+  border: 2px solid #4c9aff;
+  box-shadow: 0 0 0;
+  outline: none;
+}
+
+button[type='submit'],
+.logout-btn {
+  background: #5aac44;
+  width: 100%;
+  border-radius: 0.3em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 1.8em;
+  padding: 0.6em 1.3em;
+  position: relative;
+  text-decoration: none;
+  border: 0px;
+  cursor: pointer;
+}
+button[type='submit']:hover {
+  background: #61bd4f;
+}
+
+button.link {
+  color: #0052cc;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+button.link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  font-size: 14px;
+  color: red;
+  margin-bottom: 10px;
+}
