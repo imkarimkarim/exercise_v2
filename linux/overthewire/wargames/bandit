@@ -10,4 +10,4 @@
     10-11: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM (base64 -d data.txt)
     11-12: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv (tr [:alpha:] NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm < data.txt)
     12-13: wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw (12_13.sh)
-
+    13-14: fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq (scp -P 2220 bandit13@bandit.labs.overthewire.org:/home/bandit13/sshkey.private ~/.ssh/ssh_rsa14 ; chmod 700 ~/.ssh/ssh_rsa14 ; ssh-add ~/.ssh/ssh_rsa14)
