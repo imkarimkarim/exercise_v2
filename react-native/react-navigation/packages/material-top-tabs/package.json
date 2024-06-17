@@ -1,0 +1,79 @@
+{
+  "name": "@react-navigation/material-top-tabs",
+  "description": "Integration for the animated tab view component from react-native-tab-view",
+  "version": "7.0.0-alpha.19",
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native",
+    "react-navigation",
+    "ios",
+    "android",
+    "material",
+    "tab"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-navigation/react-navigation.git",
+    "directory": "packages/material-top-tabs"
+  },
+  "bugs": {
+    "url": "https://github.com/react-navigation/react-navigation/issues"
+  },
+  "homepage": "https://reactnavigation.org/docs/material-top-tab-navigator/",
+  "main": "lib/commonjs/index.js",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "bob build",
+    "clean": "del lib"
+  },
+  "dependencies": {
+    "@react-navigation/elements": "^2.0.0-alpha.17",
+    "color": "^4.2.3",
+    "react-native-tab-view": "^4.0.0-alpha.10"
+  },
+  "devDependencies": {
+    "@react-navigation/native": "workspace:^",
+    "@testing-library/react-native": "^12.4.3",
+    "@types/react": "~18.2.45",
+    "del-cli": "^5.1.0",
+    "react": "18.2.0",
+    "react-native": "0.73.2",
+    "react-native-builder-bob": "^0.23.2",
+    "react-native-pager-view": "6.2.3",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@react-navigation/native": "workspace:^",
+    "react": ">= 18.2.0",
+    "react-native": ">= 0.72.0",
+    "react-native-pager-view": ">= 6.0.0"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}
