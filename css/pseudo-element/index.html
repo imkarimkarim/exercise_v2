@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDO-ELEMENT</title>
+    <style>
+        /* https://youtu.be/PTVXnOrQoBQ */
+        body{
+            background-color: #0b0d10;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            transition: all ;
+            padding: 1rem 2rem;
+            background-color: #161a20;
+            border: none;
+            color: #f0f0f0;
+            border-radius: 1000px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        button::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 1000px;
+            z-index: -1;
+            background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+            padding: 0.1rem;
+        }
+        button:hover{
+            z-index: 0; /* default z-index: auto */
+            box-shadow: 40px 0 100px #008cff85, -40px 0 100px #e100ffbb;
+
+        }
+    </style>
+</head>
+<body>
+    <button>Gradient Button</button>
+</body>
+</html>
