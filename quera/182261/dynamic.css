@@ -1,0 +1,20 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+a {
+  background-color: var(--color--nav-link-background);
+  color: var(--color--body-foreground);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
+  flex: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+a:hover {
+  background-color: var(--color--nav-link-background--hover);
+}
